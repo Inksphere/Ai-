@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AI Form Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body>
+
+<header>🤖 AI Google Form Filler</header>
+
+<section class="card">
+<h3>Upload PDF (Malayalam supported)</h3>
+<input type="file" id="pdfFile">
+<button onclick="extractPDF()">Extract Text</button>
+<textarea id="pdfText"></textarea>
+</section>
+
+<section class="card">
+<h3>Parsed Answers</h3>
+<button onclick="parseQA()">Parse Q → A</button>
+<div id="answers"></div>
+</section>
+
+<section class="card">
+<h3>Google Form</h3>
+<input id="formUrl" placeholder="Google Form URL">
+<button onclick="sendToSheet()">Send to Google Sheets</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
